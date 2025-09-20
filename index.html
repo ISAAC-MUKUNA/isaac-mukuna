@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Isaac Mukuna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <Img src="token-branded--mkr.svg" alt="">
+      <span>isaac mukuna</span>
+    </div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#cv">cv</a></li>
+        <li><a href="#project">project</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <!-- Menu burger visible uniquement en mobile -->
+      <div class="burger">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- SECTION HERO -->
+  <main class="hero">
+    <div class="hero-photo">
+      <!-- Place ton image dans ton dossier et nomme-la isaac.jpg -->
+      <img src="isaac.jpg" alt="Photo de Isaac Mukuna">
+    </div>
+
+    <div class="hero-text">
+      <h1>HELLO</h1>
+      <h2>A PROPOS DE MOI</h2>
+      <p>
+        Je suis <strong>ISAAC MUKUNA</strong>, développeur web passionné.<br>
+        Doté d’une créativité débordante et d’un talent pour concrétiser
+        des idées en expériences numériques interactives.
+      </p>
+
+      <!-- Boutons -->
+      <div class="hero-buttons">
+        <a href="cv.html" class="btn btn-cv">cv</a>
+        <a href="projet.html" class="btn btn-projet">projet</a>
+        <a href="contact.html" class="btn btn-contact">contact</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <!-- Ligne au-dessus -->
+    <div class="footer-line"></div>
+
+    <div class="footer-content">
+      <div class="footer-item">
+        <strong>Téléphone</strong><br>
+        <span>+243 89 27 88 707</span>
+      </div>
+
+      <div class="footer-item">
+        <strong>Email</strong><br>
+        <a href="mailto:mukunai846@gmail.com">mukunai846@gmail.com</a>
+      </div>
+
+      <div class="footer-item">
+        <strong>suivez-moi</strong><br>
+        <!-- Place tes icônes dans ton dossier /icons -->
+        <a href="#"><img src="facebook-brands-solid-full.svg" alt="Facebook"></a>
+        <a href="#"><img src="instagram-brands-solid-full.svg" alt="Instagram"></a>
+        <a href="#"><img src="linkedin-brands-solid-full.svg" alt="LinkedIn"></a>
+      </div>
+      <div class="footer-copy">
+         <p>© 2025 BY ISAAC MUKUNA</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Script Menu Burger -->
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
