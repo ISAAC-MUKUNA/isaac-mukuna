@@ -1,0 +1,316 @@
+/* ===========================================================
+   CV - Styles (cv.css)
+   - Palette: dusty-rose / beige-foncé selon la maquette fournie
+   - Unités: rem, %, vh/vw
+   - Mise en page: flexbox & grid
+   - Breakpoints: mobile (max-width:767px), tablette (max-width:768px)
+   =========================================================== */
+
+/* -------------------------
+   Reset & base
+   ------------------------- */
+* {
+  box-sizing: border-box;
+}
+html { font-size: 16px; } /* 1rem = 16px */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #0d0d0d;
+  background: #c97474; /* fond principal (rose saumon comme sur la maquette) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page wrapper */
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left vertical accent (no semantic content) */
+.left-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px; /* noir vertical strip */
+  background: #050405;
+  z-index: 0;
+}
+
+/* -------------------------
+   Header
+   ------------------------- */
+.site-header {
+  position: relative;
+  z-index: 2;
+  padding: 1.1rem 2.5rem;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo: place ton logo ici */
+.logo-img {
+  max-width: 5.5rem;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Navigation */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #0d0d0d;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 200ms ease, transform 150ms ease;
+}
+.main-nav a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.index li a{
+  color: white;
+}
+
+/* -------------------------
+   Main content area
+   ------------------------- */
+.cv-main {
+  flex: 1;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1.5rem;
+}
+
+/* central container width */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Title area */
+.cv-title {
+  text-align: center;
+  margin: 3rem 0 2.5rem;
+}
+.cv-label {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #0d0d0d;
+}
+.cv-fullname {
+  margin: 2.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* -------------------------
+   Sections (formation / compétences / langues)
+   ------------------------- */
+.cv-section {
+  background: transparent;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.12); /* subtle rule like the mock */
+}
+
+/* Section title */
+.section-title {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0d0d0d;
+}
+
+/* Content inside sections */
+.section-content {
+  font-size: 0.95rem;
+  color: #151212;
+  padding-right: 6rem; /* large right padding to visually match spacing on the mock */
+  line-height: 1.6;
+}
+
+/* bullet lists */
+.bullet-list {
+  margin-left: 1.05rem;
+  margin-top: 0.5rem;
+}
+.bullet-list li {
+  margin: 0.6rem 0;
+}
+
+/* -------------------------
+   Page spacer to respect vertical spacing of mock (desktop)
+   ------------------------- */
+.page-spacer {
+  height: 12vh; /* reserve vertical space like in the mock */
+}
+
+/* -------------------------
+   Footer
+   ------------------------- */
+.site-footer {
+  margin-top: auto;
+  padding: 1rem 2rem 2rem;
+  background: transparent;
+  z-index: 2;
+}
+
+/* Footer top thin rule (must be above icons/content) */
+.footer-line {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Footer inner: layout 4 columns on wide screens */
+.footer-inner {
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+/* Footer columns */
+.footer-col {
+  color: #0d0d0d;
+}
+.footer-col .small {
+  margin: 0.35rem 0 0;
+  color: rgba(0,0,0,0.75);
+}
+
+/* Social icons container */
+.footer-social .icons {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+.icon-link img {
+  width: 1.1rem;
+  height: auto;
+  display: block;
+  filter: brightness(0) saturate(100%) invert(7%) sepia(9%) saturate(1800%) hue-rotate(319deg) brightness(92%) contrast(92%);
+  /* above filter tints icons to dark — remove if you want original colors */
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+.icon-link:hover img {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* copyright alignment on the right */
+.footer-copy {
+  justify-self: end;
+}
+
+/* -------------------------
+   Hover / focus effects (small interactions)
+   ------------------------- */
+a:focus { outline: 2px solid rgba(0,0,0,0.08); outline-offset: 2px; }
+
+/* -------------------------
+   Responsive rules
+   - Tablette: only screen and (max-width: 768px)
+   - Mobile: (max-width: 767px)
+   ------------------------- */
+
+/* TABLET (<= 768px) */
+@media only screen and (max-width: 768px) {
+  .header-inner {
+    padding: 0 1rem;
+  }
+  .cv-fullname {
+    font-size: 1.6rem;
+    margin: 1.8rem 0;
+  }
+  .section-content {
+    padding-right: 3rem;
+  }
+  .page-spacer { height: 8vh; }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .footer-copy { justify-self: center; grid-column: 1 / -1; margin-top: 0.6rem; }
+}
+.btn:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.index{
+  background-color: #0a157a; /* jaune */
+}
+/* MOBILE (<= 767px) */
+@media (max-width: 767px) {
+  /* reduce left accent width a bit */
+  .left-accent { width: 6px; }
+
+  .header-inner {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 0.6rem;
+  }
+  .main-nav ul { gap: 1rem; }
+
+  .cv-title {
+    margin: 2rem 0 1.2rem;
+  }
+  .cv-label { font-size: 1.6rem; }
+  .cv-fullname { font-size: 1.25rem; margin: 1.2rem 0; }
+
+  .container {
+    width: 96%;
+  }
+
+  .section-content {
+    padding-right: 0;
+    font-size: 0.95rem;
+  }
+
+  /* Footer becomes stacked (mobile-friendly) */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  .footer-copy {
+    justify-self: start;
+    margin-top: 0.4rem;
+  }
+
+  /* reduce spacer to show content more compact */
+  .page-spacer { height: 6vh; }
+}
+
+/* -------------------------
+   Print friendly
+   ------------------------- */
+@media print {
+  body { background: white; color: #000; }
+  .left-accent, .main-nav { display: none; }
+  .footer-inner { display: block; }
+}

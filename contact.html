@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Isaac Mukuna</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- accent vertical noir à gauche (comme sur la maquette) -->
+    <div class="left-accent" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <div class="logo">
+          <!-- PLACE TON LOGO ICI : ./assets/logo.png ou texte -->
+          <img src="token-branded--mkr.svg" alt="Logo Isaac Mukuna" class="logo-img">
+          <!-- <span class="logo-text">Isaac Mukuna</span> -->
+        </div>
+
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+          <div class="hero-buttons">
+            <div class="rer">
+              <a href="index.html" class="btn btn-cv ">retour</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN: layout two-column -->
+    <main class="main">
+      <div class="container">
+
+        <!-- Left column: contact infos -->
+        <aside class="contact-info" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+
+          <div class="info-block">
+            <h3>Phone</h3>
+            <p class="muted">+243 89 27 88 707</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Email</h3>
+            <p class="muted"><a href="mailto:mukunai846@gmail.com">mukunai846@gmail.com</a></p>
+          </div>
+        </aside>
+
+        <!-- Right column: contact form -->
+        <section class="contact-form" aria-labelledby="form-title">
+          <h2 id="form-title" class="sr-only">Formulaire de contact</h2>
+
+          <form action="#" method="post" novalidate>
+            <div class="row two-cols">
+              <label>
+                <span class="field-label">First Name</span>
+                <input type="text" name="firstName" placeholder="Prénom">
+              </label>
+
+              <label>
+                <span class="field-label">Last Name</span>
+                <input type="text" name="lastName" placeholder="Nom">
+              </label>
+            </div>
+
+            <div class="row two-cols">
+              <label>
+                <span class="field-label">Email</span>
+                <input type="email" name="email" placeholder="adresse@mail.com">
+              </label>
+
+              <label>
+                <span class="field-label">Subject</span>
+                <input type="text" name="subject" placeholder="Sujet">
+              </label>
+            </div>
+
+            <div class="row">
+              <label>
+                <span class="field-label">Message</span>
+                <textarea name="message" rows="6" placeholder="Votre message..."></textarea>
+              </label>
+            </div>
+
+            <!-- Bouton rond -->
+            <div class="row btn-row">
+              <button class="btn-send" type="submit" aria-label="Envoyer le message">Envoyer</button>
+            </div>
+          </form>
+        </section>
+
+      </div> <!-- /container -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <!-- ligne au-dessus des infos -->
+      <div class="footer-line" aria-hidden="true"></div>
+
+      <div class="footer-inner">
+        <div class="footer-col">
+          <strong>Téléphone</strong>
+          <p class="small">+243 89 27 88 707</p>
+        </div>
+
+        <div class="footer-col">
+          <strong>Email</strong>
+          <p class="small"><a href="mailto:mukunai846@gmail.com">mukunai846@gmail.com</a></p>
+        </div>
+
+        <div class="footer-col">
+          <strong>Suivez-moi</strong>
+          <div class="social">
+            <!-- PLACE TES ICONES ICI : ./assets/icons/instagram.svg etc. -->
+            <a href="#" class="icon"><img src="facebook-brands-solid-full.svg" alt="Instagram"></a>
+            <a href="#" class="icon"><img src="instagram-brands-solid-full.svg" alt="LinkedIn"></a>
+            <a href="#" class="icon"><img src="linkedin-brands-solid-full.svg" alt="Twitter"></a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-copy">
+          <p class="small">© 2025 By isaac mukuna</p>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- /page -->
+</body>
+</html>
